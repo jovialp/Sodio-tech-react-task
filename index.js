@@ -10,7 +10,6 @@ import Admin from './components/Admin';
 import Menu from './components/Menu';
 import Pnf from './components/Pnf';
 
-
 const menu = (
     <Router history={createBrowserHistory()}>
         <Switch> 
