@@ -1,0 +1,58 @@
+.form-bg {
+  background-color: #f15077;
+  padding: 20px;
+  color: #fff;
+  min-height: 100vh;
+}
+.apply-form {
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 2px;
+}
+.form-group {
+  padding: 10px;
+}
+.button-form {
+  margin: 20px 0 0 0;
+  padding: 20px 0 0 0;
+}
+.line-h {
+  margin: 20px -35px;
+  background-color: rgba(75, 75, 75, 0.5);
+  height: 1px;
+}
+.button-submitform {
+  margin: 10px 0;
+  padding-top: 20px;
+}
+.admin-bg {
+  background-color: #fff;
+}
+.navbar-default {
+  background-color: rgba(75, 75, 75, 0);
+  border: none;
+}
+.navbar-default .navbar-nav li > a {
+  color: blue;
+}
+.navbar-inverse .navbar-nav ul li:active {
+  border-radius: 4px;
+  background-color: blue;
+}
+.navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a {
+  color: #fff;
+  background-color: blue;
+}
+.navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #fff;
+  background-color: blue;
+  border-radius: 4px;
+}
+.full-window{
+  min-height: 100vh;
+}
