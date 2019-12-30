@@ -17,7 +17,7 @@ class Apply extends Component {
                                         <label>Full Name</label>
                                     </div>
                                     <div className="col-xs-12 col-md-9">
-                                        <input type="text" name="fullname" className="form-control" required />
+                                        <input type="text" name="name" className="form-control" required />
                                     </div>
                                 </div>
                                 <div className="col-xs-12"><div className="line-h"></div></div>
@@ -36,7 +36,7 @@ class Apply extends Component {
                                         <label>Contacting number</label>
                                     </div>
                                     <div className="col-xs-12 col-md-9">
-                                        <input type="tel" name="mobile" className="form-control" placeholder="+91 9988554344" required />
+                                        <input type="tel" name="phone" className="form-control" placeholder="+91 9988554344" required />
                                     </div>
                                 </div>
                                 <div className="col-xs-12"><div className="line-h"></div></div>
