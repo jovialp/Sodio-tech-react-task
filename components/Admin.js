@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import Table from './components/Table';
 const API_ADDRESS = "https://sodiotask.herokuapp.com/User/UsersDetails";
 
 const currentTitle = "Frond End Developer";
@@ -327,11 +326,11 @@ class Admin extends Component {
                   </table>
                 </div>
               </div>
-              <div className="row">
-              <div className="col-xs-12">
-                  <Table jobseekers={this.state.jobseekers} />
-              </div>
-              </div>
+              // <div className="row">
+              // <div className="col-xs-12">
+              //     <Table jobseekers={this.state.jobseekers} />
+              // </div>
+              // </div>
             </div>
           </div>
         </div>
