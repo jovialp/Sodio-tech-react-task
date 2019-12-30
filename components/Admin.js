@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Table from './components/Table';
+import Table from './Table';
 const API_ADDRESS = "https://sodiotask.herokuapp.com/User/UsersDetails";
 
 const currentTitle = "Frond End Developer";
