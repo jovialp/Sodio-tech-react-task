@@ -4,7 +4,16 @@ const API_ADDRESS = "https://sodiotask.herokuapp.com/User/UserDetails";
 
 class Table extends Component {
   state = { user : null };
-  
+  viewDetails = id =>{
+    fetch(`${API_ADDRESS}`)
+      .then(response => response.json())
+      .then(json => {
+        console.log(json);
+        this.setState({ user : json });
+        // console.log(this.state.user);
+      })
+      .catch(error => alert(console.error.message));
+  }
   render() {
     const { jobseekers } = this.props;
     return (
@@ -51,6 +60,71 @@ class Table extends Component {
             })}
           </tbody>
         </table>
+        <div className="row">
+                <div className="col-xs-12">
+                  <div id="myModal" className="modal fade" role="dialog">
+                    <div className="modal-dialog">
+                      <div className="modal-content">
+                        <div className="modal-header">
+                          <button
+                            type="button"
+                            className="close"
+                            data-dismiss="modal"
+                          >
+                            &times;
+                          </button>
+                          <h4 className="modal-title">Rajesh Profile</h4>
+                        </div>
+                        <div className="modal-body">
+                          <div className="row">
+                            <div className="col-xs-6">
+                              <h5>Contact Number</h5>
+                            </div>
+                            <div className="col-xs-6">
+                              <p>+91 9987675644</p>
+                            </div>
+                          </div>
+                          <div className="row">
+                            <div className="col-xs-6">
+                              <h5>Email</h5>
+                            </div>
+                            <div className="col-xs-6">
+                              <p>"rajesh@sodio.tech"</p>
+                            </div>
+                          </div>
+                          <div className="row">
+                            <div className="col-xs-6">
+                              <h5>Skills</h5>
+                            </div>
+                            <div className="col-xs-6">
+                              <p>HTML</p>
+                              <p>CSS</p>
+                            </div>
+                          </div>
+                          <div className="row">
+                            <div className="col-xs-6">
+                              <h5>Experience</h5>
+                            </div>
+                            <div className="col-xs-6">
+                              <p>2 years</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="modal-footer">
+                          <button
+                            type="button"
+                            className="btn btn-default"
+                            data-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
       </div>
     );
   }
