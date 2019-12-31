@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 
+const API_ADDRESS = "https://sodiotask.herokuapp.com/User/UserDetails";
+
 class Table extends Component {
+  state = { user : null };
+  
   render() {
     const { jobseekers } = this.props;
     return (
