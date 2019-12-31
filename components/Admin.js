@@ -79,7 +79,7 @@ class Admin extends Component {
                             type="button"
                             className="btn btn-info"
                             data-toggle="modal"
-                            data-target="#myModal1"
+                            data-target="#myModal"
                           >
                             View Details
                           </button>
@@ -92,7 +92,7 @@ class Admin extends Component {
                         <td>
                           <button className="btn btn-danger">Reject</button>
                         </td>
-                        <div id="myModal1" className="modal fade" role="dialog">
+                        <div id="myModal" className="modal fade" role="dialog">
                           <div className="modal-dialog">
                             <div className="modal-content">
                               <div className="modal-header">
