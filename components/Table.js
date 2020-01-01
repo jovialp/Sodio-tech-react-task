@@ -3,19 +3,20 @@ import React, { Component } from "react";
 const API_ADDRESS = "https://sodiotask.herokuapp.com/User/UserDetails";
 
 class Table extends Component {
-  state = { user : null };
+  state = { user : '' };
   viewDetails = id =>{
-    fetch(`${API_ADDRESS}`)
+    fetch(`${API_ADDRESS}/${id}`)
       .then(response => response.json())
       .then(json => {
-        console.log(json);
-        this.setState({ user : json });
+        console.log(json.data);
+        this.setState({ user : json.data });
         // console.log(this.state.user);
       })
       .catch(error => alert(console.error.message));
   }
   render() {
     const { jobseekers } = this.props;
+    const {name, email, phone, skills, jobTitle,experience }= this.state.user;
     return (
       <div>
         <table className="table">
@@ -40,14 +41,15 @@ class Table extends Component {
                   <td>{experience}</td>
                   <td>{appliedDate}</td>
                   <td>
-                    <button
+                    <a
                       type="button"
                       className="btn btn-info"
                       data-toggle="modal"
                       data-target="#myModal"
+                      onClick={this.viewDetails.bind(this,_id)}
                     >
                       View Details
-                    </button>
+                    </a>
                   </td>
                   <td>
                     <button className="btn btn-success">Short list</button>
@@ -73,7 +75,7 @@ class Table extends Component {
                           >
                             &times;
                           </button>
-                          <h4 className="modal-title">Rajesh Profile</h4>
+                          <h4 className="modal-title"> {name}  Profile</h4>
                         </div>
                         <div className="modal-body">
                           <div className="row">
@@ -81,7 +83,7 @@ class Table extends Component {
                               <h5>Contact Number</h5>
                             </div>
                             <div className="col-xs-6">
-                              <p>+91 9987675644</p>
+                              <p> {phone} </p>
                             </div>
                           </div>
                           <div className="row">
@@ -89,7 +91,7 @@ class Table extends Component {
                               <h5>Email</h5>
                             </div>
                             <div className="col-xs-6">
-                              <p>"rajesh@sodio.tech"</p>
+                              <p> {email} </p>
                             </div>
                           </div>
                           <div className="row">
@@ -97,8 +99,7 @@ class Table extends Component {
                               <h5>Skills</h5>
                             </div>
                             <div className="col-xs-6">
-                              <p>HTML</p>
-                              <p>CSS</p>
+                              <p> {skills} </p>
                             </div>
                           </div>
                           <div className="row">
@@ -106,7 +107,7 @@ class Table extends Component {
                               <h5>Experience</h5>
                             </div>
                             <div className="col-xs-6">
-                              <p>2 years</p>
+                              <p> {experience} </p>
                             </div>
                           </div>
                         </div>
